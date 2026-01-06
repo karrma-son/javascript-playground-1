@@ -15,3 +15,7 @@ let taxes = .1
 let total = cost + (cost * taxes)
 
 console.log(`Actually your total is $${total}, sorry for the confusion.`)
+console.log("Actually your total is $" + total + ", sorry for the confusion.")
+
+
+
