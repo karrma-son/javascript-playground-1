@@ -9,7 +9,7 @@ function statement(value){
     console.log(`The answer is ${value}`)
 }
 
-function add(value1, value2){
+function add1(value1, value2){
     let result = value1+value2
     statement(result)
     return result
@@ -22,13 +22,15 @@ function add(value1, value2, value3){
     return "Mason"
 }
 
-const addResult = add(3, 5, 7)
-statement(addResult)
+
 
 const subtractResult = (value,value2) => {
 
     return value - value2
 } 
 
-
+const addResult = add(3, 5, 7)
+statement(addResult)
+add1(2,2)
+add(1,2,3)
 statement(subtractResult(5, 1))
