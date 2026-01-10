@@ -2,9 +2,9 @@
 // function timeCounter(hour, user){
 // if (hour >= 6 && hour <=12){
 //     console.log(`Good morning${user}`)
-// }else if (hour >=13 && hour <=17){
+// } else if (hour >=13 && hour <=17){
 //     console.log(`Good afternoon${user}`)
-// }else {
+// } else {
 //     console.log(`Good night${user}`)
 // }
 // };
@@ -40,29 +40,29 @@ const statment = (value) => {
 
 function whatGen(year, user){
     if (year >=1901 && year <=1927){
-        console.log(`${user} is part of the Greatest Generation.`)
-        return "Greatest Generation"
-    }else if (year >= 1928 && year <= 1945){
-         console.log(`${user} is part of the Silent Generation.`)
-         return "Silent Generation"
-    }else if (year >= 1946 && year <= 1964){
-         console.log(`${user} is part of the Baby Boomer Generation.`)
-         return "Baby Boomer"
-    }else if (year >= 1965 && year <= 1980){
-         console.log(`${user} is part of Generation X.`)
-         return "Generation X"
-    }else if (year >= 1981 && year <= 1996){
-         console.log(`${user} is part of the Millennial Generation.`)
-         return "Millennial Generation"
-    }else if (year >=1997 && year <=2010){
-         console.log(`${user} is part of Generation Z.`)
-         return "Generation Z"
-    }else if (year >=2010 && year <=2024){
-         console.log(`${user} is part of Generation Alpha.`)
-         return "Generation Alpha"
-    }else{
-         console.log(`${user} is a baby part of Generation Beta.`)
-         return "Generation Beta"
+        console.log(`${user} is part of the Greatest Generation.`);
+        return "Greatest Generation";
+    } else if (year >= 1928 && year <= 1945){
+         console.log(`${user} is part of the Silent Generation.`);
+         return "Silent Generation";
+    } else if (year >= 1946 && year <= 1964){
+         console.log(`${user} is part of the Baby Boomer Generation.`);
+         return "Baby Boomer";
+    } else if (year >= 1965 && year <= 1980){
+         console.log(`${user} is part of Generation X.`);
+         return "Generation X";
+    } else if (year >= 1981 && year <= 1996){
+         console.log(`${user} is part of the Millennial Generation.`);
+         return "Millennial Generation";
+    } else if (year >=1997 && year <=2010){
+         console.log(`${user} is part of Generation Z.`);
+         return "Generation Z";
+    } else if (year >=2010 && year <=2024){
+         console.log(`${user} is part of Generation Alpha.`);
+         return "Generation Alpha";
+    } else{
+         console.log(`${user} is a baby part of Generation Beta.`);
+         return "Generation Beta";
     }
 }
 
@@ -72,5 +72,16 @@ function whatGen(year, user){
 // whatGen(1999, "Maden")
 // whatGen(2025, "Briar")
 
-statment(whatGen(1993, "Mason"))
 
+
+
+const barEntry = (year, user) => {
+const legal = (year <= 2005) ? "an adult" : "a minor";
+console.log(`${user} is ${legal}`);
+}
+
+
+
+
+statment(whatGen(1993, "Mason"));
+barEntry(2008,"Mason");
