@@ -1,25 +1,25 @@
 const button = document.getElementById('button1');
 const content = document.getElementById('content');
 
-let countdown; 
-let count = 11; 
+let timeValue; 
+ 
 
 function updateCalculation(){
-  if (count > 1 ) {
-    count--;
+  let count = 10;
+  while( count > 0){
     content.textContent = count;
-  } else { 
-      content.textContent = 'BLAST OFF!';
-      clearInterval(countdown);
-      countdown = null;
-      count = 11;
-    
+    count --;
+    console.log(count)
   }
+      content.textContent = 'BLAST OFF!';
+      clearInterval(timeValue);
+      timeValue = null;
+      count = 11;
 };
 
 function countDown(){
-  if (!countdown) {
-    countdown = setInterval(updateCalculation, 1000);
+  if (!timeValue) {
+    timeValue = setInterval(updateCalculation, 1000);
   }
 
 }
