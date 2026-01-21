@@ -1,7 +1,7 @@
 const button = document.getElementById('button2');
 const content = document.getElementById('content2');
 
-const score = {
+const score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
     ties: 0,
@@ -35,13 +35,14 @@ function computerMove() {
 
 
 function rockPaperScissor(){
-    console.log(score);
+   console.log(JSON.parse(localStorage.getItem('score')));
+    
     let playerChoice = prompt("what is your choice?");
     const value = computerMove();
 
     if(playerChoice === value) {
         alert("TIE");
-        score.ties += 1;
+        score.ties++ ;
         return;
     }
 
@@ -50,10 +51,10 @@ function rockPaperScissor(){
         
         if (value === select.choice2) {
             alert("YOU LOSE");
-            score.losses += 1;
+            score.losses++;
         } else {
             alert("YOU WIN");
-            score.wins += 1;
+            score.wins++;
         }
 
     } else if (playerChoice === select.choice2){
@@ -61,10 +62,10 @@ function rockPaperScissor(){
         
         if (value === select.choice3) {
             alert("YOU LOSE");
-            score.losses += 1;
+            score.losses++;
         } else {
             alert("YOU WIN");
-            score.wins += 1;
+            score.wins++;
         }
 
     } else if (playerChoice ===  select.choice3) {
@@ -72,20 +73,21 @@ function rockPaperScissor(){
         
         if ( value === select.choice1) {
             alert("YOU LOSE");
-            score.losses += 1;
+            score.losses++;
         } else {
             alert("YOU WIN");
-            score.wins += 1;
+            score.wins++;
         } 
     } else {
         alert("Invalid choice. Type rock, paper, or scissor.");
         return
     };
 
+ localStorage.setItem('score', JSON.stringify(score));
 
 };
 
 
-button.addEventListener('click', rockPaperScissor)
+button.addEventListener('click', rockPaperScissor);
 
 
