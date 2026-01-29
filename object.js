@@ -23,7 +23,7 @@
 //     {species: "Horse", class: "Mammal", family: "Equidae", genus: "Equus", size: 8, threatened: false}
 // ];
 //  console.log(`The first species to compare is a ${animalList[0].species}`)
-//  console.log(animalList[1]['species'])
+//  console.log(animalList[1]['size'])
 
 
  const product = {
@@ -40,7 +40,7 @@
     order: function() {
         console.log('this is a method')
     },
-    method() {
+    newMethod() {
         console.log(`This is also a method checking how many larges - 
         ${product.count.large} which is a ${typeof product.count.large}`)
     }
@@ -49,7 +49,7 @@
 
 console.log(product.count.medium);
 product.order();
-product.method();
+product.newMethod();
 console.log(`${JSON.stringify(product.count)} 
 is a string from an  ${typeof product.count}`);
 

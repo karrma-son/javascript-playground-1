@@ -27,41 +27,22 @@
    
  
 // };
-// const animals = ["Cat", "Horse", "Dog", "Bobby", "Giraffe", "Leopard", "Ghost", "Monkey"];
+const animals = ["Cat", "Horse", "Dog", "Bobby", "Giraffe", "Leopard", "Ghost", "Monkey"];
+
+counter = [];
+
+for (i =0; i<animals.length; i++){
+    if(animals[i] == "Giraffe"){
+        counter.push(animals[i]);
+        console.log(animals[i]);
+        console.log(`${counter} - This is the animal with the longest neck`);
+        continue;
+    }else{
+        console.log(`${animals[i]}`);
+    
+    } 
+}
 
 
 
 
-
-// const animalList =[ 
-//     {species: "Jaguar", class: "Mammal", family: "Felidae", genus: "Panthera", size: 6, threatened: false},
-//     {species: "Horse", class: "Mammal", family: "Equidae", genus: "Equus", size: 8, threatened: false}
-// ];
-//  console.log(`The first species to compare is a ${animalList[0].species}`)
-//  console.log(animalList[1]['species'])
-
-
- const product = {
-    name: "Polo Shirt",
-        'shipping-time': '3 days',
-    count: {
-        small: 40,
-        medium: 35,
-        large: 50,
-        xlarge: 30,
-        xxl: 25,
-        xxl: 15
-    },  
-    order: function() {
-        console.log('this is a method')
-    },
-    method() {
-        console.log(`This is also a method checking how many larges - 
-        ${product.count.large} which is a ${typeof product.count.large}`)
-    }
-
- };
-
- console.log(product.count.medium);
-product.order();
-product.method();
