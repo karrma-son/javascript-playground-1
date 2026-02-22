@@ -61,7 +61,8 @@ const cart = updateCartQuantity(list1);
 console.log(cart);
 console.log(`You currently have ${cart.length} items in your cart.`);
 
-// const continues = prompt('Would you like to continue?', "Yes");
+const continues = prompt('Would you like to continue?', "Yes");
+console.log(continues);
 // if (continues == "Yes") {
 //     console.log("please add more");
 // }else{
