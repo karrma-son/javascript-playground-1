@@ -1,24 +1,24 @@
 
-var largestAltitude = function(gain) {
-    let counter = 0;
-    let higher = [0];
-    let highest = [0]
+// const largestAltitude = (gain) => {
+//     let counter = 0;
+//     let highest = 0;
 
+//     gain.forEach(element =>  {
+//         counter+= element;
+//         highest = Math.max(counter, highest)
+//     });
+    
+//     return highest
+// };
 
-    for (let i = 0; i<gain.length; i++){
-        counter += gain[i];
-        higher.push(counter)   
+const largestAltitude = gain =>{
+    let max = 0, sum = 0;
+    for(const i of gain){
+        sum += i;
+        if(sum>max) max = sum;
     }
-    for (let j = 0; j<=higher.length; j++){
-        if (highest[0]<higher[j]){
-            highest.pop()
-            highest.push(higher[j])
-            
-        }
-        
-    }
-    console.log(highest[0])
-};
+    console.log(max)
+}
 
 let gain1 = [-5,1,5,0,-7]
 let gain2 = [-4,-3,-2,-1,4,3,2]
